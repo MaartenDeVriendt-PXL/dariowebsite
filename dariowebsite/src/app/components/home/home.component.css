@@ -1,0 +1,37 @@
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('https://assets.johnsonhealthtech.com/transform/5a8c7899-f55a-4c14-b6e4-677ba90fbc00/optimized-showcase-jpg?io=transform:fill,width:1592,height:999') center/cover no-repeat;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #ffcc00; /* Geel accentkleur */
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background: #ffcc00;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #e6b800;
+}
