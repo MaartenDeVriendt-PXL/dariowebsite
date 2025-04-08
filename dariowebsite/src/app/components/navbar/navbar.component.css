@@ -1,26 +1,83 @@
 mat-toolbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
-  background-color: #1976d2 !important; /* Material Blue */
-  color: white;
+  padding: 0 40px;
+  background: rgba(30, 30, 30, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 70px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.logo:hover {
+  color: var(--accent);
+  transform: scale(1.05);
 }
 
 .spacer {
   flex: 1;
 }
 
-a {
+mat-toolbar a {
   text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
+  color: var(--text-primary) !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+  position: relative;
 }
 
-a:hover {
-  color: #ffcc00;
+mat-toolbar a:hover {
+  color: var(--accent) !important;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+mat-toolbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+mat-toolbar a:hover::after {
+  width: 80%;
+}
+
+@media (max-width: 600px) {
+  mat-toolbar {
+    padding: 0 20px;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  mat-toolbar a {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
 }

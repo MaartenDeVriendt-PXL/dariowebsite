@@ -1,8 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+/* Global styles */
+:root {
+  --dark-bg: #121212;
+  --dark-surface: #1E1E1E;
+  --dark-surface-2: #2A2A2A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B3B3;
+  --accent: #ffcc00;
+  --accent-hover: #ffd700;
+  --border-color: rgba(255, 255, 255, 0.1);
 }
-body{
-  background-color: ghostwhite;
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark-surface-2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* Global link styling */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
 }
